@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sponsor via WeChat Pay</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #0f172a;
+      --card: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22c55e;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at 10% 20%, rgba(34, 197, 94, 0.12), transparent 25%),
+        radial-gradient(circle at 90% 10%, rgba(52, 211, 153, 0.1), transparent 20%),
+        radial-gradient(circle at 40% 80%, rgba(34, 197, 94, 0.14), transparent 25%),
+        var(--bg);
+      color: var(--text);
+      padding: 24px;
+    }
+
+    .card {
+      max-width: 960px;
+      width: min(960px, 100%);
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      background: linear-gradient(145deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(32px, 4vw, 42px);
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .qr-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      border-radius: 16px;
+      background: rgba(34, 197, 94, 0.08);
+      border: 1px solid rgba(34, 197, 94, 0.18);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .qr-wrapper img {
+      width: min(360px, 100%);
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+    }
+
+    .steps {
+      display: grid;
+      gap: 10px;
+    }
+
+    .steps strong {
+      color: var(--text);
+    }
+
+    footer {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="text" aria-label="Sponsorship instructions">
+      <p class="highlight">Thank you for your support</p>
+      <h1>Sponsor me with WeChat Pay</h1>
+      <p>
+        Scan the QR code with the <strong>WeChat</strong> app to send a sponsorship.
+        Your contribution helps me keep building and sharing more projects.
+      </p>
+      <div class="steps">
+        <p><strong>1.</strong> Open WeChat on your phone.</p>
+        <p><strong>2.</strong> Tap the <em>+</em> button and choose <em>Scan</em>.</p>
+        <p><strong>3.</strong> Point your camera at the QR code to complete the payment.</p>
+      </div>
+      <footer>Prefer to share? Send this page so others can scan too.</footer>
+    </section>
+    <section class="qr-wrapper" aria-label="WeChat Pay QR code">
+      <img src="9d4f1e56a09678c2b4094f63b3a32a37.jpg" alt="WeChat Pay QR code for sponsoring" loading="lazy" />
+    </section>
+  </main>
+</body>
+</html>
